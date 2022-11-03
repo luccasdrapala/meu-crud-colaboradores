@@ -5,22 +5,22 @@
     <form method="post">
 
         <div class="form-floating mt-3">
-            <input name="nome" class="form-control" type="text" id="floatingInput">
+            <input name="nome" class="form-control" type="text" id="floatingInput" required>
             <label for="floatingInput">Nome</label>
         </div>
 
         <div class="form-floating mt-3">
-            <input name="funcao" class="form-control" type="text" id="floatingInput">
+            <input name="funcao" class="form-control" type="text" id="floatingInput" required>
             <label for="floatingInput">Função</label>
         </div>
 
         <div class="form-floating mt-3">
-            <input name="setor" class="form-control" type="text" id="floatingInput">
+            <input name="setor" class="form-control" type="text" id="floatingInput" required>
             <label for="floatingInput">Setor</label>
         </div>
 
         <div class="form-floating mt-3">
-            <input name="email" class="form-control" type="email" id="floatingInput">
+            <input name="email" class="form-control" type="email" id="floatingInput" required>
             <label for="floatingInput">Email</label>
         </div>
 
@@ -44,12 +44,12 @@
         <hr>
 
         <div class="form-group mt-4">
-
             <button class="btn btn-success me-2" type="submit">Cadastrar</button>
-            
-            <a href="index.php">
-                <button class="btn btn-danger" type="submit">Voltar</button>
-            </a>
         </div>
     </form>
+
+    <a href="/index.php">
+        <button class="btn btn-danger mt-3">Cancelar</button>
+    </a>
+
 </main>
