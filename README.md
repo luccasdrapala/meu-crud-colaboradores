@@ -17,3 +17,10 @@ CREATE TABLE colaboradores(
     data TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 );
 ```
+### Executar o composer
+
+*Necessario que o composer esteja instalado, para então executar no terminal o comando:
+
+```
+composer install
+```
