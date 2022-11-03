@@ -15,11 +15,11 @@
 <!--Navbar-->
     <div class="navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">Meu Crud :)</a>
+            <a class="navbar-brand text-light p-3" href="#">Crud de Colaboradores</a>
         </div>
     </div>
 
     <!-- Inicio container -->
-    <div class="container mt-2">
+    <div class="container mt-3">
 
 

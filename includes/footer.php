@@ -1,5 +1,4 @@
         
-        FOOTER
         <!-- Fim do container -->
         </div>
     </body>

@@ -1,5 +1,5 @@
 # meu-crud-colaboradores
-Crud de pessoas colaboradoras
+Crud de pessoas colaboradoras, o principal intuito é utilizar do PHP e PDO para fazer um programa WEB que insire, altere, atualize e exclua dados do banco de dados.
 
 ### Instruções básicas:
 
