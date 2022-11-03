@@ -13,7 +13,7 @@
 <body>
 
 <!--Navbar-->
-    <div class="navbar navbar-expand-lg bg-secondary">
+    <div class="navbar navbar-expand-lg bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand text-light p-3" href="#">Crud de Colaboradores</a>
         </div>

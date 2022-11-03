@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Vaga {
+class Colaborador {
 
     /**
      * Identificador unico da vaga
@@ -44,5 +44,8 @@ class Vaga {
      * data da criação ou modificação da vaga
      * @var timestamp
      */
+    public $data;
+
+    
 }
 ?>
