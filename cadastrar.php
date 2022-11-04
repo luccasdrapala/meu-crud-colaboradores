@@ -7,8 +7,6 @@ use \App\Entity\Colaborador;
 
 $obColab = new Colaborador;
 
-
-
 //validação do POST
 if(isset($_POST['nome'] , $_POST['funcao'], $_POST['setor'], $_POST['email'], $_POST['ativo'])){
     

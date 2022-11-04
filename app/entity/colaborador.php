@@ -56,9 +56,11 @@ class Colaborador {
         //setando a data fora, pois de outra forma deu bug
         $this->data = date('Y-m-d H:i:s');
 
-        //inserindo dados no banco
+        //inserindo dados no banco 
         $obDatabase = new Database('colaboradores');
-        $obDatabase->insert([
+
+        //a função insert retorna o id da inserção, podendo assim se setado no objeto ($this->id)
+        $this->id = $obDatabase->insert([
                             'nome' => $this->nome,
                             'funcao' => $this->funcao,
                             'setor' => $this->setor,
