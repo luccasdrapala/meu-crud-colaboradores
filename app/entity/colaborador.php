@@ -45,7 +45,13 @@ class Colaborador {
      * @var timestamp
      */
     public $data;
-
     
+    /**
+     * funcao responsavel por cadastrar dados no banco de dados
+     * @return bolean
+     */
+    public function cadastrar(){
+        return true;
+    }
 }
 ?>

@@ -19,7 +19,7 @@ CREATE TABLE colaboradores(
 ```
 ### Executar o composer
 
-*Necessario que o composer esteja instalado, para então executar no terminal o comando:
+*Necessario que o composer e o PHP esteja instalado, para então executar no terminal o comando:
 
 ```
 composer install
