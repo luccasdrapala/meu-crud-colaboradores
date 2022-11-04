@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 use App\Db\Database;
+use PDO;
 
 class Colaborador {
 
@@ -69,6 +70,11 @@ class Colaborador {
                             'data' => $this->data
                             ]);
         return true;
+    }
+
+    public static function getVagas(){
+        return (new Database('colaboradores'))->select($where = null, $order = null, $limit = null)
+        ->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 }
 ?>

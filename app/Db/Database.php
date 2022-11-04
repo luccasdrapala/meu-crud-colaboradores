@@ -40,7 +40,7 @@ class Database {
      * @param array $params
      * @return PDOStatement
      */
-    public function execute($query, $params){
+    public function execute($query, $params=[]){
 
         try {
             $statement = $this->connection->prepare($query);
@@ -69,5 +69,26 @@ class Database {
 
         //retorna a ultima ID para que a mesma possa ser setada no objeto 
         return $this->connection->lastInsertId();
+    }
+
+    /**
+     * funcao que recebe parametros da query e executa um select
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @param string $fields
+     * @return PDOStatement
+     */
+    public function select($where =null, $order = null, $limit = null, $fields='*') {
+        
+        //tratando parametros para inserir no final da query
+        $where = strlen($where) ? ' WHERE '.$where : '';
+        $order = strlen($order) ? ' WHERE '.$order : '';
+        $limit = strlen($limit) ? ' WHERE '.$limit : '';
+
+        //montando a query
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;
+
+        return $this->execute($query);
     }
  }
