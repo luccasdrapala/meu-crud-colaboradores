@@ -5,22 +5,22 @@
     foreach($colaboradores as $colab){
 
         $resultado .= '<tr class="table-light">
-                        <td>'. $colab->id .'</td>
-                        <td>'. $colab->nome .'</td>
-                        <td>'. $colab->funcao .'</td>
-                        <td>'. $colab->setor .'</td>
-                        <td>'. $colab->email .'</td>
-                        <td>'. $colab->ativo .'</td>
-                        <td>'. date('Y-m-d', strtotime($colab->data)).'</td>
-                        <td class="text-center">
-                            <a href="">
-                                <button class="btn btn-warning">Alterar</button>
-                            </a>
-                            <a href="">
-                                <button class="btn btn-danger">Excluir</button>
-                            </a>
-                        </td>
-                    </tr>';
+                            <td>'. $colab->id .'</td>
+                            <td>'. $colab->nome .'</td>
+                            <td>'. $colab->funcao .'</td>
+                            <td>'. $colab->setor .'</td>
+                            <td>'. $colab->email .'</td>
+                            <td>'. ($colab->ativo == 's' ? "Ativo" : "Inativo") .'</td>
+                            <td>'. date('Y-m-d', strtotime($colab->data)).'</td>
+                            <td class="text-center">
+                                <a href="">
+                                    <button class="btn btn-warning">Alterar</button>
+                                </a>
+                                <a href="">
+                                    <button class="btn btn-danger">Excluir</button>
+                                </a>
+                            </td>
+                        </tr>';
 
     }
 
