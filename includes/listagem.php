@@ -1,5 +1,32 @@
-<main>
+<?php
 
+    $resultado = '';
+
+    foreach($colaboradores as $colab){
+
+        $resultado .= '<tr class="table-light">
+                        <td>'. $colab->id .'</td>
+                        <td>'. $colab->nome .'</td>
+                        <td>'. $colab->funcao .'</td>
+                        <td>'. $colab->setor .'</td>
+                        <td>'. $colab->email .'</td>
+                        <td>'. $colab->ativo .'</td>
+                        <td>'. date('Y-m-d', strtotime($colab->data)).'</td>
+                        <td class="text-center">
+                            <a href="">
+                                <button class="btn btn-warning">Alterar</button>
+                            </a>
+                            <a href="">
+                                <button class="btn btn-danger">Excluir</button>
+                            </a>
+                        </td>
+                    </tr>';
+
+    }
+
+?>
+
+<main>
     <section>
         <a href="cadastrar.php" class="">
             <button class="btn btn-success">Novo Colaborador</button>
@@ -11,7 +38,7 @@
     <section>
         
         <table class='table'>
-            <tr class='table-danger'>
+            <tr class='table-secondary'>
                 <th scope='col'>ID</th>
                 <th scope='col'>NOME</th>
                 <th scope='col'>FUNÇÃO</th>
@@ -21,23 +48,7 @@
                 <th scope='col'>DATA</th>
                 <th scope='col' class="text-center">OPÇÃO</th>
             </tr>
-            <tr class="table-secondary">
-                <td>1</td>
-                <td>Luccas</td>
-                <td>Analista</td>
-                <td>TI</td>
-                <td>luccas@gmail.com</td>
-                <td>Ativo</td>
-                <td>04/11/2022</td>
-                <td class="text-center">
-                    <a href="">
-                        <button class="btn btn-warning">Alterar</button>
-                    </a>
-                    <a href="">
-                        <button class="btn btn-danger">Excluir</button>
-                    </a>
-                </td>
-            </tr>
+            <?=$resultado?>
         </table>
 
     </section>
