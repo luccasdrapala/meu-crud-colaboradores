@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+use App\Db\Database;
 
 class Colaborador {
 
@@ -48,9 +49,23 @@ class Colaborador {
     
     /**
      * funcao responsavel por cadastrar dados no banco de dados
-     * @return bolean
+     * @return boolean
      */
     public function cadastrar(){
+        
+        //setando a data fora, pois de outra forma deu bug
+        $this->data = date('Y-m-d H:i:s');
+
+        //inserindo dados no banco
+        $obDatabase = new Database('colaboradores');
+        $obDatabase->insert([
+                            'nome' => $this->nome,
+                            'funcao' => $this->funcao,
+                            'setor' => $this->setor,
+                            'email' => $this->email,
+                            'ativo' => $this->ativo,
+                            'data' => $this->data
+                            ]);
         return true;
     }
 }
