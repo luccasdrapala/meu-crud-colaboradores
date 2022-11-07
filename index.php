@@ -6,7 +6,7 @@ use App\Entity\Colaborador;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$colaboradores = Colaborador::getVagas();
+$colaboradores = Colaborador::getColabs();
 
 // echo '<pre>';
 // print_r($colaborador);

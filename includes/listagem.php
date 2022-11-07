@@ -13,15 +13,14 @@
                             <td>'. ($colab->ativo == 's' ? "Ativo" : "Inativo") .'</td>
                             <td>'. date('Y-m-d', strtotime($colab->data)).'</td>
                             <td class="text-center">
-                                <a href="">
+                                <a href="alterar.php?id='.$colab->id.'">
                                     <button class="btn btn-warning">Alterar</button>
                                 </a>
-                                <a href="">
+                                <a href="excluir.php?id='.$colab->id.'">
                                     <button class="btn btn-danger">Excluir</button>
                                 </a>
                             </td>
                         </tr>';
-
     }
 
 ?>

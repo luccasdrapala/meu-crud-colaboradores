@@ -72,10 +72,15 @@ class Colaborador {
         return true;
     }
 
-    //metodo s]estatico para retornar vagas do banco (select)
-    public static function getVagas(){
+    //metodo estatico para retornar colaboradores do banco (select)
+    public static function getColabs(){
         return (new Database('colaboradores'))->select($where = null, $order = null, $limit = null)
         ->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
+    // metodo estatico para receber o colaborador no banco pelo seu id
+    public static function getColab($id){
+        return(new Database('colaboradores'))->select($id)->fetchObject(self::class);
     }
 }
 ?>
