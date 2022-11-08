@@ -79,7 +79,7 @@ class Database {
      * @param string $fields
      * @return PDOStatement
      */
-    public function select($where =null, $order = null, $limit = null, $fields='*') {
+    public function select($where = null, $order = null, $limit = null, $fields='*') {
         
         //tratando parametros para inserir no final da query
         $where = strlen($where) ? ' WHERE '.$where : '';
@@ -88,7 +88,7 @@ class Database {
 
         //montando a query
         $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;
-
+        
         return $this->execute($query);
     }
  }

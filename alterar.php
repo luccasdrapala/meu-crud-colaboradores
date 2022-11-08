@@ -18,21 +18,21 @@ print_r($colaborador);
 echo '</pre>';
 
 //validação do POST
-// if(isset($_POST['nome'] , $_POST['funcao'], $_POST['setor'], $_POST['email'], $_POST['ativo'])){
+if(isset($_POST['nome'] , $_POST['funcao'], $_POST['setor'], $_POST['email'], $_POST['ativo'])){
     
-//     //setando dados do objeto
-//     $obColab->nome = $_POST['nome'];
-//     $obColab->funcao = $_POST['funcao'];
-//     $obColab->setor = $_POST['setor'];
-//     $obColab->email = $_POST['email'];
-//     $obColab->ativo = $_POST['ativo'];
-//     $obColab->cadastrar();
+    //setando dados do objeto
+    $colaborador ->nome = $_POST['nome'];
+    $colaborador ->funcao = $_POST['funcao'];
+    $colaborador ->setor = $_POST['setor'];
+    $colaborador ->email = $_POST['email'];
+    $colaborador ->ativo = $_POST['ativo'];
+    $colaborador ->atualizar();
 
-//     header('Location: index.php?status=success');
-//     exit;
-// }
+    header('Location: index.php?status=success');
+    exit;
+}
 
 include __DIR__ . '/includes/header.php';
-include __DIR__ . '/includes/formulario-cadastrar.php';
+include __DIR__ . '/includes/formulario-alterar.php';
 include __DIR__ . '/includes/footer.php';
 

@@ -72,6 +72,10 @@ class Colaborador {
         return true;
     }
 
+    public function atualizar(){
+        //continuar daqui
+    }
+
     //metodo estatico para retornar colaboradores do banco (select)
     public static function getColabs(){
         return (new Database('colaboradores'))->select($where = null, $order = null, $limit = null)
@@ -80,7 +84,7 @@ class Colaborador {
 
     // metodo estatico para receber o colaborador no banco pelo seu id
     public static function getColab($id){
-        return(new Database('colaboradores'))->select($id)->fetchObject(self::class);
+        return(new Database('colaboradores'))->select('id = '.$id)->fetchObject(self::class);
     }
 }
 ?>
