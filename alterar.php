@@ -13,10 +13,6 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 //consulta colaborador pelo ID
 $colaborador = Colaborador::getColab($_GET['id']);
 
-echo '<pre>';
-print_r($colaborador);
-echo '</pre>';
-
 //validação do POST
 if(isset($_POST['nome'] , $_POST['funcao'], $_POST['setor'], $_POST['email'], $_POST['ativo'])){
     

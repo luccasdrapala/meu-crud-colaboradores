@@ -91,4 +91,21 @@ class Database {
         
         return $this->execute($query);
     }
+    
+    /**
+     * metodo responsavel por atualizar um registro no banco de dados
+     * @param int $id
+     * @param array $param 
+     */
+    public function update($where, $param){
+
+        $campos = array_keys($param);
+        
+        //monatndo a query
+        //apos o implode coloca-se "=?" por que o implode não coloca o separador no final
+        $query = 'UPDATE '. $this->table . ' SET '.implode('=?,',$campos). '=?' . 
+        ' WHERE '.$where;
+        $this->execute($query, array_values($param));
+    }
+
  }

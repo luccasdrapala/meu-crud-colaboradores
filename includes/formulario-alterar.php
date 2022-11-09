@@ -44,7 +44,7 @@
         <hr>
 
         <div class="form-group mt-4">
-            <button class="btn btn-success me-2" type="submit">Cadastrar</button>
+            <button class="btn btn-success me-2" type="submit">Atualizar</button>
         </div>
     </form>
 

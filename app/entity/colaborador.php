@@ -73,7 +73,20 @@ class Colaborador {
     }
 
     public function atualizar(){
-        //continuar daqui
+        
+        //seta a data do momento da alteracao
+        $this->data = date('Y-m-d H:i:s');
+
+        //criando objeto do banco
+        return (new Database('colaboradores'))->update('id = '.$this->id, [
+            'nome' => $this->nome,
+            'funcao' => $this->funcao,
+            'setor' => $this->setor,
+            'email' => $this->email,
+            'ativo' => $this->ativo,
+            'data' => $this->data
+            ]);
+
     }
 
     //metodo estatico para retornar colaboradores do banco (select)
