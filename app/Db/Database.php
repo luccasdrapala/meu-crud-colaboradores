@@ -91,6 +91,19 @@ class Database {
         
         return $this->execute($query);
     }
+    /**
+     * metodo que exclui registro pelo seu ID
+     * @param string $id
+     * @return bool
+     */
+    public function delete($where){
+    
+        //montando a query
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+
+        $this->execute($query);
+        return true;
+    }
     
     /**
      * metodo responsavel por atualizar um registro no banco de dados

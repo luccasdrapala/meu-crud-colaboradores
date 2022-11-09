@@ -89,6 +89,10 @@ class Colaborador {
 
     }
 
+    public function excluir(){
+        return (new Database('colaboradores'))->delete('id= '.$this->id);
+    }
+
     //metodo estatico para retornar colaboradores do banco (select)
     public static function getColabs(){
         return (new Database('colaboradores'))->select($where = null, $order = null, $limit = null)
