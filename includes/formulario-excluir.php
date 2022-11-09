@@ -1,5 +1,5 @@
 <section>
-    <form>
+    <form method="post">
         <div class="form-group">
             <p>Tem certeza que deseja excluir o colaborador <strong><?=$colaborador->nome?> ?</strong></p>
         </div>
