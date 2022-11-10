@@ -12,7 +12,7 @@ CREATE TABLE colaboradores(
     nome varchar(255) not null,
     funcao varchar(255) not null,
     setor varchar(255) not null,
-    email varchar(15),
+    email varchar(150),
     ativo ENUM('s','n') NOT null,
     data TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 );
