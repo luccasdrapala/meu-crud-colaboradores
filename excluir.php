@@ -8,7 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 
-    header('location: index.php?status="erro1"');
+    header('location: index.php?status="erro"');
     exit;
 }
 
@@ -16,7 +16,7 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 $colaborador = Colaborador::getColab($_GET['id']);
 
 if(!$colaborador instanceof Colaborador){
-    header('location: index.php?status=erro2');
+    header('location: index.php?status=erro');
     exit;
 }
 

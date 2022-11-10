@@ -23,9 +23,39 @@
                         </tr>';
     }
 
+    $resultado = strlen($resultado) ? $resultados : '<tr>
+                                                        <td colspan="8" class="text-center">
+                                                            Nenhuma vaga encontrada
+                                                        </td>
+                                                     </td>';
+
+    $status = '';
+
+    if(isset($_GET['status'])){
+
+        switch($_GET['status']){
+
+            case 'success' :
+                $status = '
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Operação Efetuada!</strong> Operação efetuada com sucesso.
+                </div>';
+                break;
+            
+            case 'error' :
+                $status = '
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Operação Inválida</strong> Operação não pode ser validada.
+                </div>';
+                break;
+        }
+    }
 ?>
 
 <main>
+
+    <?=$status?>
+
     <section>
         <a href="cadastrar.php" class="">
             <button class="btn btn-success">Novo Colaborador</button>
