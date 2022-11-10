@@ -23,9 +23,9 @@
                         </tr>';
     }
 
-    $resultado = strlen($resultado) ? $resultados : '<tr>
+    $resultado = strlen($resultado) ? $resultado : '<tr>
                                                         <td colspan="8" class="text-center">
-                                                            Nenhuma vaga encontrada
+                                                            Nenhum funcionário encontrado
                                                         </td>
                                                      </td>';
 
